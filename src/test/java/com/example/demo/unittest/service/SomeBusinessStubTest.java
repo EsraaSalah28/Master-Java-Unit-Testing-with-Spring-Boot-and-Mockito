@@ -10,6 +10,8 @@ class SomeDataServiceStub implements SomeBusinessService{
     }
 }
 
+
+
 public class SomeBusinessStubTest  {
     @Test
     public void  CalculateSumUsingData(){
