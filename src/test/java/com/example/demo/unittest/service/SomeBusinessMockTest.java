@@ -2,14 +2,20 @@ package com.example.demo.unittest.service;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-
+@RunWith(MockitoJUnitRunner.class)
 public class SomeBusinessMockTest {
-    SomeBussinessLogic someBussinessLogic= new SomeBussinessLogic();
-    SomeBusinessService someBusinessService = mock(SomeBusinessService.class);
+    @InjectMocks
+    SomeBussinessLogic someBussinessLogic;
+    @Mock
+    SomeBusinessService someBusinessService ;
 
     @Before
     public void setUp(){
